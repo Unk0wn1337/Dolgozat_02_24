@@ -73,4 +73,6 @@ public class Konyv extends Kategoria implements Serializable, Comparable<Konyv>,
         return this.kiadasiEve - masik.kiadasiEve;
     }
 
+
+
 }
