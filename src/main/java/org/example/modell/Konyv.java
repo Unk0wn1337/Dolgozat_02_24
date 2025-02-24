@@ -12,7 +12,7 @@ public class Konyv extends Kategoria implements Serializable, Comparable<Konyv> 
         super(ar, leiras);
         setCim(cim);
         setSzerzo(szerzo);
-        this.kiadasiEve = kiadasiEve;
+        setKiadasiEve(kiadasiEve);
     }
 
     public static SzerzoComparator rendezSzerzo(){
@@ -24,7 +24,11 @@ public class Konyv extends Kategoria implements Serializable, Comparable<Konyv> 
     }
 
     public void setCim(String cim) {
-        this.cim = cim;
+        if(cim.length() < 6){
+            throw new RuntimeException("Nincsen meg 6 betű a cím");
+        } else {
+            this.cim = cim;
+        }
     }
 
     public String getSzerzo() {
