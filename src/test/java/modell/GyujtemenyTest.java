@@ -8,7 +8,7 @@ import java.io.Serializable;
 import java.util.UUID;
 
 
-public class GyujtemenyTest {
+ public class GyujtemenyTest {
     Gyujtemeny gy = new Gyujtemeny();
     @Test
     public void szerializalhatoTest(){
