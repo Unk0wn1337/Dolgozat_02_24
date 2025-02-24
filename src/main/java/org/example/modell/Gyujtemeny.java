@@ -3,6 +3,8 @@ package org.example.modell;
 import java.io.Serializable;
 import java.util.*;
 
+//
+
 public class Gyujtemeny  implements Iterable<Media>, Serializable  {
      ArrayList<Media> KonyvLista;
 

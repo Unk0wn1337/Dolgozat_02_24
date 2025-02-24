@@ -2,6 +2,8 @@ package org.example.modell;
 
 import java.util.UUID;
 
+//
+
 public class Media  {
     private UUID id;
     private int ar;

@@ -2,6 +2,8 @@ package org.example.modell;
 
 import java.util.UUID;
 
+//
+
 public class Kategoria extends Media {
     String leiras;
 

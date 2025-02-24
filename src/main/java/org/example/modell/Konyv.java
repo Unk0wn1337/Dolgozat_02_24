@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.util.Objects;
 import java.util.UUID;
 
+//
+
 public class Konyv extends Kategoria implements Serializable, Comparable<Konyv>, Cloneable {
     private String cim;
     private String szerzo;

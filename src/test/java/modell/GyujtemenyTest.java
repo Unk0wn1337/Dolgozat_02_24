@@ -1,11 +1,16 @@
 package modell;
 
+//
+
 import org.example.modell.Gyujtemeny;
 import org.example.modell.Konyv;
 import org.junit.jupiter.api.Test;
 
 import java.io.Serializable;
 import java.util.UUID;
+
+
+//
 
 
  public class GyujtemenyTest {

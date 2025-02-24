@@ -3,6 +3,8 @@ package org.example.modell;
 import java.text.Collator;
 import java.util.Comparator;
 
+//
+
 public  class SzerzoComparator implements Comparator {
 
     @Override
