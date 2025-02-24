@@ -5,8 +5,8 @@ import java.util.UUID;
 public class Kategoria extends Media {
     String leiras;
 
-    public Kategoria(int ar, String leiras) {
-        super(ar);
+    public Kategoria(UUID id,int ar, String leiras) {
+        super(id,ar);
         this.leiras = leiras;
     }
 

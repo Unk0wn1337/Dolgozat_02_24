@@ -2,14 +2,15 @@ package org.example.modell;
 
 import java.io.Serializable;
 import java.util.Objects;
+import java.util.UUID;
 
-public class Konyv extends Kategoria implements Serializable, Comparable<Konyv> {
+public class Konyv extends Kategoria implements Serializable, Comparable<Konyv>, Cloneable {
     private String cim;
     private String szerzo;
     private int kiadasiEve;
 
-    public Konyv(int ar, String leiras, String cim, String szerzo, int kiadasiEve) {
-        super(ar, leiras);
+    public Konyv(UUID id, int ar, String leiras, String cim, String szerzo, int kiadasiEve) {
+        super(id,ar, leiras);
         setCim(cim);
         setSzerzo(szerzo);
         setKiadasiEve(kiadasiEve);
@@ -56,6 +57,13 @@ public class Konyv extends Kategoria implements Serializable, Comparable<Konyv> 
     }
 
     @Override
+    protected Object clone() throws CloneNotSupportedException {
+        Media ujMedia = new Media(UUID.randomUUID(),this.getAr());
+        Konyv k = new Konyv(ujMedia.getId(),ujMedia.getAr(),"Leiras1","Cim1","Szerzo1",2000);
+        return k;
+    }
+
+    @Override
     public int hashCode() {
         return Objects.hash(cim, szerzo);
     }
@@ -64,4 +72,5 @@ public class Konyv extends Kategoria implements Serializable, Comparable<Konyv> 
     public int compareTo(Konyv masik) {
         return this.kiadasiEve - masik.kiadasiEve;
     }
+
 }
