@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.*;
 
 public class Gyujtemeny  implements Iterable<Media>, Serializable  {
-    ArrayList<Media> KonyvLista;
+     ArrayList<Media> KonyvLista;
 
     public Gyujtemeny() {
         this.KonyvLista = new ArrayList<>();
